@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="개인 맞춤형 얼굴 분석 솔루션">
+
+    <meta property="og:title" content="논현동오실장">
+    <meta property="og:description" content="개인 맞춤형 얼굴 분석 솔루션">
+    <meta property="og:image" content="/img/thumbnail.png">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
+    <link rel="manifest" href="/fav/site.webmanifest">
+    <link rel="mask-icon" href="/fav/safari-pinned-tab.svg" color="#ff4848">
+    <meta name="msapplication-TileColor" content="#ff4848">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css"/>
+
+    <link rel="stylesheet" href="style.css">
+    <script defer src ="config.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <img onclick="moveHome()" src="img/logo.png" alt="Logo">
+    </header>
+    
+    <section class="analysis">
+        <div class="canvas-wrapper">
+            <canvas width="1080" height="1080"></canvas>
+            <canvas width="1080" height="1080"></canvas>
+            <canvas width="1080" height="1080"></canvas>
+            <canvas width="1080" height="1080"></canvas>
+            <canvas width="1080" height="1080"></canvas>
+            <canvas width="1080" height="1080"></canvas>
+            <canvas width="1080" height="1080"></canvas>
+            <canvas width="1080" height="1080"></canvas>
+            <canvas width="1080" height="1080"></canvas>
+            <canvas width="1080" height="1080"></canvas>
+            <canvas width="1080" height="1080"></canvas>
+            <canvas width="1080" height="1080"></canvas>
+            <canvas width="1080" height="1080"></canvas>
+            <canvas width="1080" height="1080"></canvas>
+            <canvas width="1080" height="1080"></canvas>
+            <canvas width="1080" height="1080"></canvas>
+            <canvas width="1080" height="1080"></canvas>
+            <canvas width="1080" height="1080"></canvas>
+            <canvas width="1080" height="1080"></canvas>
+            <canvas width="1080" height="1080"></canvas>
+            <canvas width="1080" height="1080"></canvas>
+            <canvas width="1080" height="1080"></canvas>
+            <canvas width="1080" height="1080"></canvas>
+            <canvas width="1080" height="1080"></canvas>
+            <canvas width="1080" height="1080"></canvas>
+            <canvas width="1080" height="1080"></canvas>
+        </div>
+        <div class="analysis-wrapper">
+            <div class="analysis-header">
+                <div class="analysis-header-content">
+                    <div class="analysis-step">STEP 1</div>
+                    <div class="analysis-title">정면 사진 업로드</div>
+                </div>
+                <div class="analysis-progress">1/6</div>
+            </div>
+            <div class="analysis-content">
+                <div class="photo">
+                    <label for="choosePhoto">photo<br><span>사진 업로드</span></label>
+                </div>
+                <input type="file" id="choosePhoto" name="choosePhoto" accept="image/*" onchange="choosePhoto(this)">
+            </div>
+            <div class="analysis-navigation">
+                <div onclick="movePrevStep()" class="analysis-prev untouchable">← 이전 단계로</div>
+                <div onclick="moveNextStep()" class="analysis-next untouchable">다음 단계로 →</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="result">
+        <div class="result-subtitle">RESULT</div>
+        <div class="result-title">얼굴 분석 결과</div>
+        <div class="result-content">
+            <div class="result-nose">· 코(Nose) : []</div>
+            <div class="result-eyes">· 눈(Eyes) : []</div>
+            <div class="result-eyebrows">· 눈썹(Eyebrows) : []</div>
+            <div class="result-lips">· 입술(Lips) : []</div>
+            <div class="result-faceline">· 얼굴 윤곽(Face Line) : []</div>
+        </div>
+    </section>
+</body>
+</html>
